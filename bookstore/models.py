@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
-
-
-
 #User = get_user_model()
 
 
@@ -27,8 +24,8 @@ class Book(models.Model):
     desc = models.CharField(max_length=1000)
     uploaded_by = models.CharField(max_length=100, null=True, blank=True)
     user_id = models.CharField(max_length=100, null=True, blank=True)
-    pdf = models.FileField(upload_to='bookapp/pdfs/')
-    cover = models.ImageField(upload_to='bookapp/covers/', null=True, blank=True)
+    pdf = models.FileField(upload_to='library/pdfs/')
+    cover = models.ImageField(upload_to='libary/covers/', null=True, blank=True)
 
     def __str__(self):
         return self.title

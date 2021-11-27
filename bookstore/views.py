@@ -70,26 +70,6 @@ def registerView(request):
 	    return redirect('regform')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			
-
-
 # Student views
 @login_required
 def student(request):
@@ -437,7 +417,7 @@ def asearch(request):
 
 
                 page = request.GET.get('page', 1)
-                paginator = Paginator(files, 10)
+                paginator = Paginator(files, 20)
                 try:
                     files = paginator.page(page)
                 except PageNotAnInteger:

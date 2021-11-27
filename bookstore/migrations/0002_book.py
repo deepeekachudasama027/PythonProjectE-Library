@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
                 ('desc', models.CharField(max_length=1000)),
                 ('uploaded_by', models.CharField(blank=True, max_length=100, null=True)),
                 ('user_id', models.CharField(blank=True, max_length=100, null=True)),
-                ('pdf', models.FileField(upload_to='bookapp/pdfs/')),
-                ('cover', models.ImageField(blank=True, null=True, upload_to='bookapp/covers/')),
+                ('pdf', models.FileField(upload_to='library/pdfs/')),
+                ('cover', models.ImageField(blank=True, null=True, upload_to='library/covers/')),
             ],
         ),
     ]
